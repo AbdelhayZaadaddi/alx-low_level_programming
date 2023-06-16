@@ -20,5 +20,7 @@ int main(void)
 		putchar(upp_letter);
 		upp_letter++;
 	}
+	putchar('\n');
+
 	return (0);
 }
