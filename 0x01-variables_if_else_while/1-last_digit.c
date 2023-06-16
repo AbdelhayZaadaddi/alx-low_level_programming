@@ -25,4 +25,5 @@ int main(void)
 	{
 		printf("The string Last digit of %d and is less than 6 and not a 0\n", n);
 	}
+	return (0);
 }
