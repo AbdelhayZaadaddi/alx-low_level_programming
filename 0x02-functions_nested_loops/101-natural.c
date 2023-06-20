@@ -17,7 +17,7 @@ int main(void)
 		if ((a % 3 == 0) || (b % 5 == 0))
 			b += a;
 	}
-	printf("%d\n", a);
+	printf("%d\n", b);
 
 	return (0);
 }
