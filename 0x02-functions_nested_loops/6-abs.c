@@ -5,15 +5,14 @@
  *
  * @n: cheks number
  *
- * Return: returns 1 if 'c' is lowercase, 0 (Success)
+ * Return: 0 (Success)
  *
  */
 
-int _abs(int)
+int _abs(int n)
 {
-	int n;
 
-	if (n > 0)
+	if (n < 0)
 		n = n * (-1);
 	return (n);
 }
