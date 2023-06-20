@@ -14,11 +14,11 @@ int main(void)
 	unsigned long a = 1, b = 2, s;
 	int c;
 
-	printf("%llu, %llu", a, b);
+	printf("%lu, %lu", a, b);
 	for (c = 3; c <= 50; c++)
 	{
 		s = a + b;
-		printf(", %llu", s);
+		printf(", %lu", s);
 		a = b;
 		b = s;
 	}
