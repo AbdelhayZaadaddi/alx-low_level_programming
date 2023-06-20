@@ -11,22 +11,18 @@
 
 int main(void)
 {
+	unsigned long long a = 1, b = 2, s;
 	int c;
-	unsigned long a = 1, b = 2, s;
 
-	for (c = 0; c < 50; c++)
+	printf("%llu, %llu", a, b);
+	for (c = 3; c <= 50; c++)
 	{
 		s = a + b;
-		printf("%lu", s);
-
+		printf(", %llu", s);
 		a = b;
 		b = s;
-
-		if (c == 49)
-			printf("\n");
-		else
-			printf(", ");
-
-		return (0);
 	}
+	printf("\n");
+
+	return (0);
 }
