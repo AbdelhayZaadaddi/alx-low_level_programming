@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	unsigned long a = 1, b = 2, sum = 0;
+	unsigned long a = 1, b = 2, sum = 0, n;
 
 	while (a <= 4000000)
 	{
@@ -18,8 +18,6 @@ int main(void)
 		{
 			sum += a;
 		}
-		unsigned long n;
-
 		n = a + b;
 		a = b;
 		b = n;
