@@ -12,7 +12,7 @@
 int main(void)
 {
 	int c;
-	unsigned long a = 0, b = 1, s;
+	unsigned long a = 1, b = 2, s;
 
 	for (c = 0; c < 50; c++)
 	{
