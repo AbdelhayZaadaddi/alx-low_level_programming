@@ -3,7 +3,7 @@
 /**
  ** _islower - function to check
  *
- * Description: cheks input of function
+ * @c: cheks input of function
  *
  * Return: returns 1 if 'c' is lowercase, 0 (Success)
  *
