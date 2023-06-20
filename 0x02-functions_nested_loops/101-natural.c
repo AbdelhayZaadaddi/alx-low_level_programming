@@ -14,7 +14,7 @@ int main(void)
 
 	for (a = 0; a < 1024; a++)
 	{
-		if ((a % 3 == 0) || (b % 5 == 0))
+		if ((a % 3 == 0) || (a % 5 == 0))
 			b += a;
 	}
 	printf("%d\n", b);
