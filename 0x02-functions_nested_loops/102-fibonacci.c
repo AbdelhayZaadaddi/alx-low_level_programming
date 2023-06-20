@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	unsigned long long a = 1, b = 2, s;
+	unsigned long a = 1, b = 2, s;
 	int c;
 
 	printf("%llu, %llu", a, b);
