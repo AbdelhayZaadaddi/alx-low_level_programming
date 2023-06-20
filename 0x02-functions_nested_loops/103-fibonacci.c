@@ -18,8 +18,9 @@ int main(void)
 		{
 			sum += a;
 		}
-		unsigned long n = a + b;
+		unsigned long n;
 
+		n = a + b;
 		a = b;
 		b = n;
 	}
