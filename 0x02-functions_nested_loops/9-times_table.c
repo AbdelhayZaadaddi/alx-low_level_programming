@@ -9,23 +9,23 @@
 
 void times_table(void)
 {
-	int num, num2, mul;
+	int n, m, p;
 
-	for (num = 0; num <= 9; num++)
+	for (n = 0; n <= 9; n++)
 	{
-		putchar(48);
-		for (num2 = 1; num2 <= 9; num2++)
+		_putchar(48);
+		for (m = 1; m <= 9; m++)
 		{
 			_putchar(',');
 			_putchar(' ');
 
-			mul = num * num2;
+			p = n * m;
 
-			if (mul <= 9)
+			if (p <= 9)
 				_putchar(' ');
 			else
-				_putchar((mul / 10) + 48);
-			_putchar((mul % 10) + 48);
+				_putchar((p / 10) + 48);
+			_putchar((p % 10) + 48);
 		}
 		_putchar('\n');
 	}
