@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_diagonal  - function that draws a diagonal line
+ * main - The prime factors
  *
- * @n: number of times the character
+ * Description: The prime factors
  *
  */
 
