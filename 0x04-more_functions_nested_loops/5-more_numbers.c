@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- ** print_most_numbers  - function that prints most numbers
+ ** more_numbers  - function that prints most numbers
  *
  */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
 	int n;
 	int m;
@@ -18,7 +18,7 @@ void print_most_numbers(void)
 			{
 				_putchar('1');
 			}
-			_putchar(m % 10 + '0');
+			_putchar(m % 10 + 48);
 		}
 		_putchar('\n');
 	}
