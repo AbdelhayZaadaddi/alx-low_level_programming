@@ -1,15 +1,18 @@
 #include "main.h"
 
 /**
- * print_diagonal  - function that draws a diagonal line
+ * main  - function that draws a diagonal line
  *
- * @n: number of times the character
+ * Description: Fizz-Buzz test
+ *
+ * Return: return 0 (Success)
  *
  */
 
-int main()
+int main(void)
 {
 	int i;
+
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
