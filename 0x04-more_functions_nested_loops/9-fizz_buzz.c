@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main  - function that draws a diagonal line
+ * main  - prints the numbers from 1 to 100, followed by a new line
  *
- * Description: Fizz-Buzz test
+ * Description: prints the numbers from 1 to 100, followed by a new line
  *
  * Return: return 0 (Success)
  *
