@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_diagonal  - function that draws a straight line
+ * print_diagonal  - function that draws a diagonal line
  *
- * @n:  number of times the character
+ * @n: number of times the character
  *
  */
 
