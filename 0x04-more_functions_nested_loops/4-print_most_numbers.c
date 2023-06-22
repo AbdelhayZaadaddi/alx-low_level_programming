@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- ** _isupper  - checks for uppercase character.
+ ** print_most_numbers  - function that prints the numbers
  *
- * @c: function that checks for uppercase character.
+ * Description: function that prints the numbers
  *
- * Return: returns 1 if 'c' is uppercase, 0 (Success)
  */
 
 void print_most_numbers(void)
