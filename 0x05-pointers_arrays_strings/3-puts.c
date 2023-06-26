@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _plus - eturns the length of a string
+ * _puts - eturns the length of a string
  * @str: string
  *
  */
-void _plus(char *str)
+void _puts(char *str)
 {
 	while (*str != '\0')
 	{
