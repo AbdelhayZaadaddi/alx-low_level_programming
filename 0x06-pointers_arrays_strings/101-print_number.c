@@ -1,47 +1,28 @@
 #include "main.h"
 
 /**
- * print_number - print an int.
- * @n: number tested
- *
- */
+* print_number - prints an integer
+*
+* @n: integer to be printed
+*
+* Return: void
+*/
 
 void print_number(int n)
 {
-	int i, j, d, ds, p;
-	unsigned int t, c, m;
+	unsigned int n1;
 
-	d = 0;
 	if (n < 0)
 	{
+		n1 = -n;
 		_putchar('-');
-		t = -n;
-	}
-	else
+	} else
 	{
-		t = n;
+		n1 = n;
 	}
-	m = t;
 
-	while (m >= 10)
-	{
-		m = m / 10;
-		d++;
-	}
-	ds = d + 1;
-	p = 1;
-	i = 1;
+	if (n1 / 10)
+		print_number(n1 / 10);
 
-	while (i < ds)
-	{
-		p = p * 10;
-		i++;
-	}
-	j = p;
-	while (j >= 1)
-	{
-		c = (t / j) % 10;
-		_putchar(c + 48);
-		j = j / 10;
-	}
+	_putchar((n1 % 10) + '0');
 }
