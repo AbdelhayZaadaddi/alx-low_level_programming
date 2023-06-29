@@ -13,11 +13,11 @@ char *rot13(char *str)
 	int i = 0;
 	int j;
 
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
 		for (j = 0; j <= 51; j++)
 		{
-			if (s[1] == a[j])
+			if (str[1] == a[j])
 			{
 				str[i] = rot[j];
 				break;
