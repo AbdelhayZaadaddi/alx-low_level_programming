@@ -17,7 +17,7 @@ char *rot13(char *str)
 	{
 		for (j = 0; j <= 51; j++)
 		{
-			if (str[1] == a[j])
+			if (str[i] == a[j])
 			{
 				str[i] = rot[j];
 				break;
