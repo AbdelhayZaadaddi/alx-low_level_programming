@@ -30,7 +30,8 @@ void print_number(int n)
 		d++;
 	}
 	ds = d + 1;
-	i = p = 1;
+	p = 1;
+	i = 1;
 
 	while (i < ds)
 	{
