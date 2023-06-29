@@ -1,61 +1,46 @@
 #include "main.h"
 
 /**
- * infinite_add - Add two strings representing large numbers.
- * @n1: The first number as a string.
- * @n2: The second number as a string.
- * @r: The buffer to store the result.
- * @size_r: The size of the buffer.
- *
- * Return: Pointer to the result string on success, NULL if the result does not fit in the buffer.
+ * infinite_add - adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer for result
+ * @size_r: buffer size
+ * Return: address of r or 0
  */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a_len = 0, b_len = 0, null = 0, a, b, sum, bg;
+	int i, j, p, q, m, n;
 
-	while (n1[a_len] != '\0')
-		a_len++;
-	while (n2[b_len] != '\0')
-		b_len++;
-	if (a_len > b_len)
-		bg = a_len;
-	else
-		bg = b_len;
-	if ((bg + 1) >= size_r)
-		return (NULL);
-	r[bg + 1] = '\0';
-
-	while (bg >= 0)
+	for (i = 0; n1[i]; i++)
+		;
+	for (j = 0; n2[j]; j++)
+		;
+	if (i > size_r || j > size_r)
+		return (0);
+	m = 0;
+	for (i -= 1, j -= 1, p = 0; p < size_r - 1; i--, j--, p++)
 	{
-		a = (a_len > 0) ? (n1[a_len - 1] - '0') : 0;
-		b = (b_len > 0) ? (n2[b_len - 1] - '0') : 0;
-		if (a_len > 0 && b_len > 0)
-			sum = a + b;
-		else if (a_len > 0 && b_len < 0)
-			sum = a;
-		else if (a_len < 0 && b_len > 0)
-			sum = b;
-		else
-			sum = null;
-
-		if (sum > 9)
-		{null = sum / 10;
-			sum = (sum % 10) + '0';
-		}
-		else
+		n = m;
+		if (i >= 0)
+			n += n1[i] - '0';
+		if (j >= 0)
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
 		{
-			null = 0;
-			sum = sum + '0';
+			break;
 		}
-		r[bg] = sum;
-		a_len--;
-		b_len--;
-		bg--;
+		m = n / 10;
+		r[p] = n % 10 + '0';
 	}
-
-	if (*r != '\0')
-		return (r);
-	else
-		return (r + 1);
+	r[p] = '\0';
+	if (i >= 0 || j >= 0 || m)
+		return (0);
+	for (p -= 1, q = 0; q < p; p--, q++)
+	{
+		m = r[p];
+		r[p] = r[q];
+		r[q] = m;
+	}
+	return (r);
 }
