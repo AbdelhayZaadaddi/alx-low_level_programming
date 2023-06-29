@@ -16,7 +16,7 @@ char *leet(char *str)
 
 	while (str[i] != '\0')
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			if (str[i] == m[j])
 				str[i] = n[j];
