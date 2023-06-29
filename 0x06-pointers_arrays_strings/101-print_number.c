@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * print_number - print an int numbers.
+ * print_number - print an int.
  * @n: number tested
+ *
  * Return: Always 0.
  */
 
