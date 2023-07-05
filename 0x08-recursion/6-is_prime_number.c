@@ -14,7 +14,7 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	prime_number(n, 2);
+	return (prime_number(n, 2));
 }
 
 /**
