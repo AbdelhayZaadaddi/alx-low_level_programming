@@ -11,3 +11,6 @@ int is_prime_number(int n);
 int prime_number(int n, int i);
 int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
+
+int is_palindrome_recursive(char *s, int i, int j);
+int get_length_recursive(char *p, int leng);
