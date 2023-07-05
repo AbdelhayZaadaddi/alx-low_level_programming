@@ -5,13 +5,13 @@
  *
  * @s: the string
  *
- * Return: the rturn in the athers
+ * Return: return the is palindrome recursive
 */
 int is_palindrome(char *s)
 {
 	int leng = get_length_recursive(s, 0);
 
-	is_palindrome_recursive(s, 0, leng - 1);
+	return (is_palindrome_recursive(s, 0, leng - 1));
 }
 
 /**
