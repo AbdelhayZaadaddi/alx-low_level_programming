@@ -7,16 +7,16 @@
  * @argc: The argument count
  * @argv: The argument vector
  *
- * Description: This function calculates the sum of all command-line arguments
+ * Description: This function calculates the sum
  *
- * Return: 0 (indicating successful execution) if all arguments are valid integers
+ * Return: 0 (indicating successful execution)
  */
 
 int main(int argc, char *argv[])
 {
 	int n = 0, i, j;
 
-	for(i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
 		{
