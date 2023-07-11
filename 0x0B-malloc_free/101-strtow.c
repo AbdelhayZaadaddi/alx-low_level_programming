@@ -12,8 +12,7 @@ char **strtow(char *str)
 	char **p;
 	char *u;
 
-	count = 0;
-	if (*str == '\0' || str == NULL || strcmp(str, " ") == 0)
+	if (*str == '\0' || str == NULL || str == " ")
 		return (NULL);
 	for (n = 0; str[n] != '\0'; n++)
 	{
