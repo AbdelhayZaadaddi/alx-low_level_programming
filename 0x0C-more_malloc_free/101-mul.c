@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-	char *num1_str = argv|[1];
+	char *num1_str = argv[1];
 	char *num2_str = argv[2];
 
 	if (!isValidNumber(num1_str) || !isValidNumber(num2_str))
