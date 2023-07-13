@@ -9,17 +9,17 @@
  */
 int is_digits(char *buffer)
 {
-	int iter = 0;
+	int it = 0;
 
-	while (buffer[iter] != '\0')
+	while (buffer[it] != '\0')
 	{
-		if (!(buffer[iter] >= '0' && buffer[iter] <= '9'))
+		if (!(buffer[it] >= '0' && buffer[it] <= '9'))
 			return (0);
 
-		iter++;
+		it++;
 	}
 
-	return iter;
+	return (it);
 }
 
 /**
@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 	char *buff1;
 	char *buff2;
 	int count_1, count_2;
+
 	if (argc < 3)
 	{
 		printf("Error\n");
