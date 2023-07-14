@@ -1,114 +1,99 @@
-#include "main.h"
 #include <stdio.h>
-#include <string.h>
-
+#include <stdlib.h>
+unsigned long _atoi(char *s);
 /**
- * _isdigit - checks if character is digit
- * @c: the character to check
- *
- * Return: 1 if digit, 0 otherwise
+ * mul - a function that multiplies two integers.
+ * @a: first integer
+ * @b: second integer
+ * Return: the result of the multiplication
  */
-int _isdigit(int c)
+unsigned int mul(unsigned int a, unsigned int b)
 {
-	return (c >= '0' && c <= '9');
+	return (a * b);
 }
-
 /**
- * _strlen - returns the length of a string
- * @s: the string whose length to check
- *
- * Return: integer length of string
+ * isDgt - a function that checks if a buffer has only digits.
+ * @buffer: buffer that will be tested.
+ * Return: 0 if a non-digit was found, 1 otherwise
  */
-int _strlen(char *s)
+int isDgt(char *buffer)
 {
-	int i = 0;
+	int add = 0;
 
-	while (*s++)
-		i++;
-	return (i);
-}
-
-/**
- * big_multiply - multiply two big number strings
- * @s1: the first big number string
- * @s2: the second big number string
- *
- * Return: the product big number string
- */
-char *big_multiply(char *s1, char *s2)
-{
-	char *r;
-	int l1, l2, a, b, c, x;
-
-	l1 = _strlen(s1);
-	l2 = _strlen(s2);
-	r = malloc(a = x = l1 + l2);
-	if (!r)
-		printf("Error\n"), exit(98);
-	while (a--)
-		r[a] = 0;
-
-	for (l1--; l1 >= 0; l1--)
+	while (buffer[add] != '\0')
 	{
-		if (!_isdigit(s1[l1]))
-		{
-			free(r);
-			printf("Error\n"), exit(98);
-		}
-		a = s1[l1] - '0';
-		c = 0;
+		if (!(buffer[add] >= '0' && buffer[add] <= '9'))
+			return (0);
 
-		for (l2 = _strlen(s2) - 1; l2 >= 0; l2--)
-		{
-			if (!_isdigit(s2[l2]))
-			{
-				free(r);
-				printf("Error\n"), exit(98);
-			}
-			b = s2[l2] - '0';
-
-			c += r[l1 + l2 + 1] + (a * b);
-			r[l1 + l2 + 1] = c % 10;
-
-			c /= 10;
-		}
-		if (c)
-			r[l1 + l2 + 1] += c;
+		add++;
 	}
-	return (r);
+
+	return (add);
 }
 
-
 /**
- * main - multiply two big number strings
- * @argc: the number of arguments
- * @argv: the argument vector
- *
- * Return: Always 0 on success.
+ * main - a program that multiplies two numbers.
+ * @argc: count of arguments given to the programs
+ * @argv: arguments given to the program.
+ * Return: Always 0.
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	char *r;
-	int a, c, x;
 
-	if (argc != 3)
-		printf("Error\n"), exit(98);
+	char *strBuf;
+	char *strBuf2;
+	int nbr1, nbr2;
+	unsigned int result, val1, val2;
 
-	x = _strlen(argv[1]) + _strlen(argv[2]);
-	r = big_multiply(argv[1], argv[2]);
-	c = 0;
-	a = 0;
-	while (c < x)
+	if (argc < 3)
 	{
-		if (r[c])
-			a = 1;
-		if (a)
-			_putchar(r[c] + '0');
-		c++;
+		printf("Error\n");
+		return (98);
 	}
-	if (!a)
-		_putchar('0');
-	_putchar('\n');
-	free(r);
+
+	strBuf = argv[1];
+	strBuf2 = argv[2];
+	nbr1 = isDgt(strBuf);
+	nbr2 = isDgt(strBuf2);
+
+	if ((nbr1 == 0) || (nbr2 == 0))
+	{
+		printf("Error\n");
+		return (98);
+	}
+	val1 = _atoi(strBuf);
+	val2 = _atoi(strBuf2);
+	result = mul(val1, val2);
+	printf("%d\n", result);
 	return (0);
+}
+/**
+ * _atoi - convert a string to an integer
+ *
+ * @s: string to convert
+ *
+ * Return: the converted string
+ */
+unsigned long _atoi(char *s)
+{
+	int i = 0, sign = 1, found = 0;
+	unsigned int res = 0;
+
+	while (*(s + i))
+	{
+		if (*(s + i) == '-')
+		{
+			sign *= -1;
+		}
+		if (*(s + i) >= '0' && *(s + i) <= '9')
+		{
+			res *= 10;
+			res += *(s + i) - '0';
+			found = 1;
+		}
+		else if (found)
+			break;
+		i++;
+	}
+	return (res * sign);
 }
