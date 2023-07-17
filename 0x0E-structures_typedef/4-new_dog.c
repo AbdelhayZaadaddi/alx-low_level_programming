@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
+
 /**
  * new_dog - creates a new dog
  * @name: dog name
@@ -9,6 +10,7 @@
  *
  * Return: a pointer to the structure
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i;
@@ -17,7 +19,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *p;
 
 	if (p == NULL)
+	{
+		free(p);
 		return (NULL);
+	}
 	for (i = 0; name[i]; i++)
 		;
 	for (j = 0; owner[j]; j++)
@@ -26,7 +31,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	p->owner = malloc(i + 1);
 
 	if (p->name == NULL || p->owner == NULL)
+	{
+		free(p->name), free(p->owner), free(p);
 		return (NULL);
+	}
 	for (k = 0; k < i; k++)
 		p->name[k] = name[k];
 	p->name[k] = '\0';
