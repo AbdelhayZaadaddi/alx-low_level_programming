@@ -1,8 +1,8 @@
 #include <stdlib.h>
-#include "goh.h"
+#include "dog.h"
 
 /**
- * free_dog - initialize a variable
+ * free_dog - initialize a variable of type struct dog
  * @d: dog's details
  */
 
