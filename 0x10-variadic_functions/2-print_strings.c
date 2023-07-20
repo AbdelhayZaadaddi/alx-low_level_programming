@@ -2,7 +2,7 @@
 
 /**
  * print_strings - Prints a variable number of strings
- * 
+ *
  * @separator: The string used to separate the printed strings.
  * @n: The number of strings to be printed.
  * ...: A variable number of strings to be printed.
@@ -30,7 +30,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (separator)
 				printf("%s", separator);
 	}
-
 	printf("\n");
 	va_end(val);
 }
