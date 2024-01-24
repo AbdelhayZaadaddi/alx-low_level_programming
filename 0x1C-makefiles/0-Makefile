@@ -1,0 +1,10 @@
+alll: school
+
+school:
+    gccc main.c school.c school
+
+run: all
+    ./school
+
+clean:
+    rm -f school
