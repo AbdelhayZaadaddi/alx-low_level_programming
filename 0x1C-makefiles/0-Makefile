@@ -1,7 +1,7 @@
-alll: school
+all: school
 
 school:
-    gccc main.c school.c school
+    gcc main.c school.c -o school
 
 run: all
     ./school
