@@ -16,16 +16,17 @@ int binary_search(int *array, size_t size, int value)
 {
 	int l = 0;
 	int h = size -1;
-	int mid;
+	int mid, j;
+	size_t i;
 
 	if (!array)
 		return (-1);
 
-	for (size_t i = 0; l <= h; i++)
+	for (i = 0; l <= h; i++)
 	{
 		mid = (l + h) / 2;
 		printf("Searcing in array: ");
-		for (int j = l; j <= h; j++)
+		for (j = l; j <= h; j++)
 		{
 			printf("%d", array[j]);
 			if (j != h)
